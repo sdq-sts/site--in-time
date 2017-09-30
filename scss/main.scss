@@ -10,19 +10,21 @@ body {
 
 #world {
   position: absolute;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
   background:#000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .container {
-  position: absolute;
+  position: relative;
   z-index: 100;
-  width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 .player {
@@ -141,8 +143,15 @@ body {
   width: 30%;
   height: 16em;
   background: #fff;
-  transform: translateX(101%);
-  
+  // transform: translateX(101%, -50%);
+  // transform: translateX(-50%, -50%);
+
+
+
+  // left: 50%;
+  top: 50%;
+  transform: translate(101%, -50%);
+
   &--show,
   &--hide {
     animation-duration: .2s;
