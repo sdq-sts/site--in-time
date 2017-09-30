@@ -1,20 +1,20 @@
 // Lyrics animation
 @keyframes lyrics-show {
   0% {
-    transform: translateX(101%);
+    transform: translate(101%, -50%);
   }
 
   100% {
-    transform: translateX(0);
+    transform: translate(0, -50%);
   }
 }
 
 @keyframes lyrics-hide {
   0% {
-    transform: translateX(0);
+    transform: translate(0, -50%);
   }
   100% {
-    transform: translateX(101%);
+    transform: translate(101%, -50%);
   }
 }
 
