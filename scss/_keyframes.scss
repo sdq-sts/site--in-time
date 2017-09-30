@@ -1,0 +1,59 @@
+// Lyrics animation
+@keyframes lyrics-show {
+  0% {
+    transform: translateX(101%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes lyrics-hide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(101%);
+  }
+}
+
+// Overlay animation
+@keyframes overlay-show {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 98%;
+  }
+}
+
+@keyframes overlay-hide {
+  0% {
+    height: 100%;
+    transform: translateX(0%);
+  }
+  100% {
+    height: 100%;
+    transform: translateX(101%);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translateX(0%);
+  }
+  97% {
+    transform: translateX(0%);
+  }
+  98% {
+    transform: translateX(-8px) translateY(3px) rotate(-.5deg);
+  }
+  99% {
+    transform: translateX(8px) translateY(-3px) rotate(.5deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+}

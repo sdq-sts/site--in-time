@@ -1,0 +1,203 @@
+@import "~normalize.css";
+@import "variables-mixins-helpers";
+@import "keyframes";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+#world {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background:#000;
+}
+
+.container {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: calc(1em * 1.66);
+  left: calc(1em * 1.66);
+  font-size: 1.5em;
+}
+
+.controls {
+  &__play-pause {
+    cursor: pointer;
+  }
+}
+
+.menu, .lyrics {
+  z-index: 1000;
+  color: #fff;
+}
+
+.menu {
+  font-family: 'Libre Barcode 128 Text', sans-serif;
+  font-size: 2.5em;
+  margin-left: 1em;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    line-height: 2;
+    position: relative;
+    
+    > span {
+      cursor: pointer;
+    }
+  }
+}
+
+.find-us,
+.run-fast {
+  &.front {
+    color: white;
+  }
+
+  &.back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    &.red, 
+    &.blue, 
+    &.green {
+      animation-name: glitch;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+    }
+
+    &.red {
+      color: red;
+    }
+  
+    &.blue {
+      color: blue;
+    }
+  
+    &.green {
+      color: green;
+    }
+  }
+}
+
+.first {
+  .find-us.back {
+    &.red {
+      animation-delay: .2s;
+    }
+  
+    &.blue {
+      animation-delay: .28s;
+    }
+  
+    &.green {
+      animation-delay: .36s;
+    }
+  }
+}
+
+.second {
+  .run-fast.back {
+    &.red {
+      animation-delay: 1.3s;
+    }
+  
+    &.blue {
+      animation-delay: 1.38s;
+    }
+  
+    &.green {
+      animation-delay: 1.46s;
+    }
+  }
+}
+
+.lyrics {
+  position: absolute;
+  font-family: 'Rubik', sans-serif;
+  right: 0;
+  width: 30%;
+  height: 16em;
+  background: #fff;
+  transform: translateX(101%);
+  
+  &--show,
+  &--hide {
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+  }
+
+  &--show {
+    animation-name: lyrics-show;
+  }
+
+  &--hide {
+    animation-name: lyrics-hide;
+  }
+}
+
+.overlay {
+  width: 99%;
+  background: #000;
+  height: 0;
+  top: .5em;
+  left: .5em;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  line-height: 2;
+
+  &--show,
+  &--hide {
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+  }
+
+  &--show {
+    animation-name: overlay-show;
+  }
+
+  &--hide {
+    animation-name: overlay-hide;
+  }
+}
+
+.contact {
+  position: absolute;
+  right: calc(1em * 1.66);
+  bottom: calc(1em * 1.66);
+  display: flex;
+  width: 5em;
+  justify-content: space-between;
+  
+  a {
+    color: #fff;
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|Rubik">
+  <title></title>
+</head>
+<body>
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .loading-cover {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      background: #000;
+      z-index: 2000;
+    }
+
+    .loading-cover--hide {
+      animation-name: fade-out;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fade-out {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+  </style>
+
+  <div class="loading-cover"></div>
+
+  <div id="world"></div>
+
+  <div class="container">
+    <div class="player">
+      <div class="player__controls controls">
+        <div class="controls__play-pause"><i class="fa fa-play" aria-hidden="true"></i></div>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <ul class="menu__list list">
+        <li class="list__item first">
+          <span class="find-us front glitch">you can find us</span>
+          <span class="find-us back glitch white">you can find us</span>
+          <span class="find-us back glitch red">you can find us</span>
+          <span class="find-us back glitch blue">you can find us</span>
+          <span class="find-us back glitch green">you can find us</span>
+        </li>
+        <li class="list__item second">
+          <span class="run-fast front glitch">you can run fast</span>
+          <span class="run-fast back glitch white">you can run fast</span>
+          <span class="run-fast back glitch red">you can run fast</span>
+          <span class="run-fast back glitch blue">you can run fast</span>
+          <span class="run-fast back glitch green">you can run fast</span>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="lyrics">
+      <div class="overlay">
+        <p class="overlay__text"></p>
+      </div>
+    </section>
+
+    <footer class="contact">
+      <a href="https://github.com/sdq-sts/in-time-site" title="Código" target="_blank"><i class="fa fa-code" aria-hidden="true"></i></a>
+      <a href="http://github.com/sdq-sts" title="Github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    </footer>
+  </div>
+
+</body>
+</html>
+

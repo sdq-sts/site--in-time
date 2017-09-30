@@ -1,0 +1,6 @@
+{
+  "entry": "./js/index.js",
+  "distPath": "dist",
+  "jsFilename": "bundle.js",
+  "cssFilename": "style.css"
+}
