@@ -8,7 +8,7 @@ import buildGrid from './objects/grid/buildGrid'
 import gridAnimation from './objects/grid/gridAnimation'
 import sphereAnimation from './objects/sphere/sphereAnimation'
 import skyAnimation from './objects/sky/skyAnimation'
-import Player from '../player/Player'
+import Player from '../MusicPlayer'
 /* global requestAnimationFrame */
 
 function init (music) {

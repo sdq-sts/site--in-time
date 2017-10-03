@@ -20,7 +20,7 @@ module.exports = {
     compress: true,
     hot: true,
     inline: true,
-    port: 9000
+    port: 9001
   },
 
   module: {

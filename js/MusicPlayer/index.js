@@ -1,11 +1,10 @@
-import Analyzer from './PlayerAnalyzer'
+import Analyzer from './AudioAnalyzer'
 
 function Player (song, fftSize) {
   this.song = new window.Audio(song)
   this.isPlaying = false
   this.fftSize = fftSize
   this.playPauseBtn = document.querySelector('.player > .controls > .controls__play-pause')
-  this.analyzer = new Analyzer(this.song)
 }
 
 Player.prototype.init = function () {
