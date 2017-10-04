@@ -176,6 +176,10 @@ body {
   overflow: hidden;
   line-height: 2;
 
+  &__text {
+    width: 70%;
+  }
+
   &--show,
   &--hide {
     animation-duration: .2s;

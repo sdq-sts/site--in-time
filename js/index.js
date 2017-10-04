@@ -3,7 +3,7 @@ import Canvas from './Canvas'
 import Menu from './Interface'
 import music from '../audio/DROELOE.mp3'
 
-document.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('load', (e) => {
   let loadingCover = document.querySelector('.loading-cover')
 
   Canvas.init(music)
