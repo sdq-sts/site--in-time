@@ -145,17 +145,17 @@ body {
   background: #fff;
   top: 50%;
   transform: translate(101%, -50%);
-
+  
   &--show,
   &--hide {
     animation-duration: .2s;
     animation-fill-mode: forwards;
   }
-
+  
   &--show {
     animation-name: lyrics-show;
   }
-
+  
   &--hide {
     animation-name: lyrics-hide;
   }
@@ -175,9 +175,11 @@ body {
   justify-content: center;
   overflow: hidden;
   line-height: 2;
-
+  
   &__text {
     width: 70%;
+    text-transform: uppercase;
+    font-size: .8em;
   }
 
   &--show,
